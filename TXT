@@ -1,0 +1,12 @@
+plant(Name, CommonName, Soil, Sunlight, Edible, Description, Image, Tips).
+
+suitable_plant(Soil, Sunlight, Name, CommonName) :-
+    plant(Name, CommonName, Soil, Sunlight, _, _, _, _).
+
+suitable_plant(loamy, full_sun, Name, CommonName).
+
+edible_plant(Name, CommonName) :-
+    plant(Name, CommonName, _, _, yes, _, _, _).
+
+find_plant_by_name(CommonName, Soil, Sunlight, Edible, Description, Tips) :-
+    plant(_, CommonName, Soil, Sunlight, Edible, Description, _, Tips).

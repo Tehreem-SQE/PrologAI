@@ -1,2 +1,2 @@
-# PrologAI
-Plant Identification System
+# plant_identification_system
+prolog project
